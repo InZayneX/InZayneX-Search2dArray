@@ -10,6 +10,18 @@ public class Search2dArray {
      * @return true if nums contains target, and false otherwise.
      */
     public boolean search(int[][] nums, int target){
-        return false;
-    }
+        // use a for loop inside a for loop as each for loop handles searching a particular dimension
+        // have an int i and j
+        //boolean the array nums with the two int i and j array values, to the int target 
+        // to see if an arrays of array have matching values.
+        //return true for yes, false for no
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                if (nums[i][j] == target){
+                    return true;
+                }
+            }
+        }
+        return false;   
+ }
 }
